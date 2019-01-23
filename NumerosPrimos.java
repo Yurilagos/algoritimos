@@ -1,5 +1,3 @@
-package br.com.bradseg;
-
 import java.util.Scanner;
 
 public class NumerosPrimos {
@@ -58,13 +56,13 @@ public class NumerosPrimos {
 	}
 
 	private static void devolveResultado(int menor, int maior) {
-		for (; menor < maior; menor++) {
+		StringBuilder resultado = new StringBuilder();
+		for (; menor <= maior; menor++) {
 			if (verificaSeEPrimo(menor)) {
-				System.out.print(menor + ", ");
+				resultado = resultado.append(menor + ", ");
 			}
-
 		}
-		
+		System.out.println(resultado.substring(0, resultado.length() - 2) + ".");
 		System.out.println("\n \n ========================================= \n");
 
 	}
